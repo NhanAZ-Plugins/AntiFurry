@@ -1,17 +1,26 @@
 <?php
 
+declare(strict_types=1);
+
 namespace IgPlugin\AntiFurry;
 
+use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\plugin\PluginBase;
 
-class Main extends PluginBase {
+class Main extends PluginBase implements Listener {
+
+	protected function onEnable(): void {
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+	}
 
 	public static function isCursedWords(string $string): bool {
 		$cursedwords = ["UwU", "OwO", "furry"];
 		foreach ($cursedwords as $cursedword) {
-			return str_contains($string, $cursedword);
+			if (str_contains($string, $cursedword)) {
+				return true;
+			}
 		}
 		return false;
 	}
