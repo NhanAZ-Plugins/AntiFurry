@@ -3,4 +3,5 @@ name: AntiFurry
 version: 1.0.1
 main: IgPlugin\AntiFurry\Main
 api: 5.0.0
+authors: ["NhanAZ"]
 ...
