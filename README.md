@@ -32,3 +32,8 @@ The [build workflow](.github/workflows/build.yml) checks word matching, runs PHP
 ## License and support
 
 The plugin source is licensed under [GPL-3.0](LICENSE). The `IgPlugin` namespace and contributor history are preserved. For help, use [NhanAZ Discord](https://discord.gg/j2X83ujT6c).
+
+
+## Credits
+
+Authors: NhanAZ.
